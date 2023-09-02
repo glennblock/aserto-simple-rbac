@@ -15,11 +15,11 @@ module.exports = function (options) {
   if (options === undefined || options === null) options = authzOptions;
   return {
     checkJwt: checkJwt,
-    isInGroup: isInGroup(options),
+    checkIsInGroup: checkIsInGroup(options),
   };
 };
 
-const isInGroup = (options) => {
+const checkIsInGroup = (options) => {
   return function (req, res) {
     try {
       const allowed = is("allowed", req, options, "rbac.is_in_group");
