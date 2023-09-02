@@ -1,0 +1,24 @@
+{
+  "name": "aserto-sample-js-app",
+  "version": "1.0.0",
+  "description": "A application demonstrating the use of the Aserto Javascript SDK",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo 'Error: no test specified' && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-jwt": "^6.1.1",
+    "@aserto/aserto-node": "^0.20.12",
+    "jwks-rsa": "^2.0.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
