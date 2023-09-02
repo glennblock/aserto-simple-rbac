@@ -20,10 +20,11 @@ module.exports = function (options) {
 };
 
 const checkIsInGroup = (options) => {
-  return function (req, res) {
+  return async function (req, res) {
     try {
-      const allowed = is("allowed", req, options, "rbac.is_in_group");
-      req.allowed = true;
+      const allowed = await is("allowed", req, options, "rbac.is_in_group");
+      req.allowed = allowed;
+      console.log(allowed);
       if (!allowed) {
         res.status(403).send("Unauthorized");
       }
