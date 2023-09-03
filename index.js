@@ -4,7 +4,7 @@ const express = require("express");
 const cors = require("cors");
 const asertoRbac = require("./aserto-rbac.js");
 
-const PORT = 3001;
+const PORT = 3002;
 const rbac = asertoRbac();
 const app = express();
 
