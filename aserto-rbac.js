@@ -33,6 +33,7 @@ const checkIsInGroup = (options) => {
       
       if (!allowed) {
         res.status(403).send("Unauthorized");
+        return;
       }
       next();
     } catch (e) {
