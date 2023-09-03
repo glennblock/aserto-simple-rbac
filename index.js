@@ -14,7 +14,7 @@ app.use(rbac.checkJwt);
 app.use(rbac.checkIsInGroup);
 
 app.all("/is_in_group", async (req, res) => {
-  res.send("Hello from /is_in_group");
+  res.send(`Group : "${req.query.group}" is allowed`);
 });
 
 app.listen(PORT, () => {
